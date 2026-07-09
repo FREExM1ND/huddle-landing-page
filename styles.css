@@ -25,3 +25,9 @@ ol,
 li {
   margin: 0;
 }
+
+@media screen and (width >= 45rem) {
+}
+
+@media screen and (width >= 75rem) {
+}
