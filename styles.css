@@ -11,6 +11,13 @@
   --spacing-56: 3.5rem;
   --spacing-64: 4rem;
   --mobile-margin-inline: 2.21875rem;
+  --line-height-125: 125%;
+  --line-height-150: 150%;
+  --font-size-40: 2.5rem;
+  --font-size-24: 1.5rem;
+  --font-size-18: 1.125rem;
+  --font-size-16: 1rem;
+  --font-size-12: 0.75rem;
 }
 
 html {
