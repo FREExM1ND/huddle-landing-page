@@ -1,5 +1,16 @@
 :root {
   --purple-700: hsl(257, 40%, 49%);
+  --poppins: "Poppins", Helvetica, sans-serif;
+  --open-sans: "Open Sans", Arial, sans-serif;
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2.5rem;
+  --spacing-36: 2.25rem;
+  --spacing-40: 2.5rem;
+  --spacing-56: 3.5rem;
+  --spacing-64: 4rem;
+  --mobile-margin-inline: 2.21875rem;
 }
 
 html {
@@ -26,9 +37,6 @@ li {
   margin: 0;
 }
 
-html {
-}
-
 body {
   background-color: var(--purple-700);
   position: relative;
@@ -39,6 +47,22 @@ body {
   background-image: url("./images/bg-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.landing {
+  margin-block: var(--spacing-40);
+}
+
+.landing__logo {
+  margin-bottom: var(--spacing-64);
+}
+
+.landing__card {
+  margin-inline: var(--mobile-margin-inline);
+}
+
+.landing__card--heading {
+  font-family: var(--poppins);
 }
 
 @media screen and (width >= 45rem) {
