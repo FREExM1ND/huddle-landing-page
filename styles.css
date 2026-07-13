@@ -15,6 +15,7 @@
   --spacing-62-35: 3.896875rem;
   --spacing-64: 4rem;
   --spacing-80: 5rem;
+  --spacing-104: 6.5rem;
   --line-height-125: 125%;
   --line-height-150: 150%;
   --font-weight-semibold: 600;
@@ -24,6 +25,7 @@
   --font-size-18: 1.125rem;
   --font-size-16: 1rem;
   --font-size-12: 0.75rem;
+  --content-max-width: 79.5rem;
   --landing-logo-width: 7.5rem;
   --landing-logo-desktop-width: 12.5rem;
   --landing-hero-width: 19rem;
@@ -63,11 +65,13 @@ li {
 }
 
 body {
+  align-items: center;
+  height: 100vh;
   background-color: var(--purple-700);
   position: relative;
   background-image: url("./images/bg-mobile.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   color: white;
 }
 
@@ -92,20 +96,25 @@ body {
   max-width: var(--landing-hero-width);
 }
 
+.landing__card--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .landing__card--heading {
   font-family: var(--poppins);
   line-height: var(--line-height-125);
   font-size: var(--font-size-24);
   font-weight: var(--font-weight-semibold);
-  text-align: center;
   margin-bottom: var(--spacing-24);
 }
 
-.landing__card--text {
+.landing__card--description {
   font-family: var(--open-sans);
   line-height: var(--line-height-150);
   font-size: var(--font-size-16);
-  text-align: center;
   margin-bottom: var(--spacing-32);
 }
 
@@ -129,6 +138,7 @@ body {
 
 .landing__links {
   display: flex;
+  justify-content: center;
   gap: var(--spacing-16);
 
   & .fa {
@@ -183,7 +193,7 @@ body {
     font-size: var(--font-size-40);
   }
 
-  .landing__card--text,
+  .landing__card--description,
   .landing__card--register {
     font-size: var(--font-size-18);
   }
@@ -195,4 +205,42 @@ body {
 }
 
 @media screen and (width >= 75rem) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-image: url("./images/bg-desktop.svg");
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .landing {
+    width: var(--content-max-width);
+    .landing__logo {
+      max-width: var(--landing-logo-desktop-width);
+      margin-bottom: var(--spacing-104);
+    }
+  }
+
+  .landing__card {
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .landing__card--text {
+    margin-left: var(--spacing-56);
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .landing__links {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .credits {
+    font-size: var(--font-size-16);
+  }
 }
