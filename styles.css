@@ -14,6 +14,7 @@
   --spacing-56: 3.5rem;
   --spacing-62-35: 3.896875rem;
   --spacing-64: 4rem;
+  --spacing-80: 5rem;
   --line-height-125: 125%;
   --line-height-150: 150%;
   --font-weight-semibold: 600;
@@ -24,12 +25,17 @@
   --font-size-16: 1rem;
   --font-size-12: 0.75rem;
   --landing-logo-width: 7.5rem;
+  --landing-logo-desktop-width: 12.5rem;
   --landing-hero-width: 19rem;
+  --landing-hero-tab-desk-width: clamp(38rem, 32.5rem + 12.222vw, 43.5rem);
   --register-button-width: 12.5rem;
   --register-button-height: 2.5rem;
+  --register-button-tab-desk-height: 3.5rem;
   --register-button-border-radius: 1.25rem;
-  --mobile-social-border-size: 1.75rem;
-  --mobile-social-icon-size: 0.8rem;
+  --register-button-tab-desk-border-radius: 1.75rem;
+  --register-button-shadow: 1px 3px 5px hsla(0, 0%, 0%, 0.27);
+  --mobile-social-border-size: clamp(1.75rem, 0.935rem + 3.478vw, 2.5rem);
+  --mobile-social-icon-size: clamp(0.8rem, 0.43rem + 1.577vw, 1.14rem);
 }
 
 html {
@@ -79,27 +85,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  & .landing__hero {
-    margin-bottom: var(--spacing-56);
-    max-width: var(--landing-hero-width);
-  }
+}
 
-  & .landing__card--heading {
-    font-family: var(--poppins);
-    line-height: var(--line-height-125);
-    font-size: var(--font-size-24);
-    font-weight: var(--font-weight-semibold);
-    text-align: center;
-    margin-bottom: var(--spacing-24);
-  }
+.landing__hero {
+  margin-bottom: var(--spacing-56);
+  max-width: var(--landing-hero-width);
+}
 
-  & .landing__card--text {
-    font-family: var(--open-sans);
-    line-height: var(--line-height-150);
-    font-size: var(--font-size-16);
-    text-align: center;
-    margin-bottom: var(--spacing-32);
-  }
+.landing__card--heading {
+  font-family: var(--poppins);
+  line-height: var(--line-height-125);
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  margin-bottom: var(--spacing-24);
+}
+
+.landing__card--text {
+  font-family: var(--open-sans);
+  line-height: var(--line-height-150);
+  font-size: var(--font-size-16);
+  text-align: center;
+  margin-bottom: var(--spacing-32);
 }
 
 .landing__card--register {
@@ -111,6 +118,7 @@ body {
   font-size: var(--font-size-12);
   margin-bottom: var(--spacing-62-35);
   color: var(--purple-700);
+  box-shadow: var(--register-button-shadow);
   font-weight: var(--font-weight-regular);
 }
 
@@ -158,6 +166,32 @@ body {
 }
 
 @media screen and (width >= 45rem) {
+  .landing {
+    margin-block: var(--spacing-40);
+    margin-inline: var(--spacing-80);
+  }
+
+  .landing__card {
+    margin-inline: var(--spacing-40);
+  }
+
+  .landing__hero {
+    max-width: clamp(38rem, 32.5rem + 12.222vw, 43.5rem);
+  }
+
+  .landing__card--heading {
+    font-size: var(--font-size-40);
+  }
+
+  .landing__card--text,
+  .landing__card--register {
+    font-size: var(--font-size-18);
+  }
+
+  .landing__card--register {
+    height: var(--register-button-tab-desk-height);
+    border-radius: var(--register-button-tab-desk-border-radius);
+  }
 }
 
 @media screen and (width >= 75rem) {
