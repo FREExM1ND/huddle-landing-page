@@ -25,6 +25,9 @@
   --font-size-12: 0.75rem;
   --landing-logo-width: 7.5rem;
   --landing-hero-width: 19rem;
+  --register-button-width: 12.5rem;
+  --register-button-height: 2.5rem;
+  --register-button-border-radius: 1.25rem;
   --mobile-social-border-size: 1.75rem;
   --mobile-social-icon-size: 0.8rem;
 }
@@ -100,9 +103,9 @@ body {
 }
 
 .landing__card--register {
-  width: 12.5rem;
-  height: 2.5rem;
-  border-radius: 1.25rem;
+  width: var(--register-button-width);
+  height: var(--register-button-height);
+  border-radius: var(--register-button-border-radius);
   border: 0 solid transparent;
   font-family: var(--open-sans);
   font-size: var(--font-size-12);
