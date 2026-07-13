@@ -23,6 +23,8 @@
   --font-size-18: 1.125rem;
   --font-size-16: 1rem;
   --font-size-12: 0.75rem;
+  --landing-logo-width: 7.5rem;
+  --landing-hero-width: 19rem;
   --mobile-social-border-size: 1.75rem;
   --mobile-social-icon-size: 0.8rem;
 }
@@ -65,7 +67,7 @@ body {
   margin-inline: var(--spacing-35-5);
   & .landing__logo {
     margin-bottom: var(--spacing-64);
-    max-width: 7.5rem;
+    max-width: var(--landing-logo-width);
   }
 }
 
@@ -76,7 +78,7 @@ body {
   align-items: center;
   & .landing__hero {
     margin-bottom: var(--spacing-56);
-    max-width: 19rem;
+    max-width: var(--landing-hero-width);
   }
 
   & .landing__card--heading {
