@@ -111,23 +111,22 @@ body {
 .landing__links {
   display: flex;
   gap: 1rem;
-}
 
-.border {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--mobile-social-icon-size);
-  width: var(--mobile-social-icon-size);
-  border: 1px solid white;
-  border-radius: 50%;
-}
+  & .border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--mobile-social-icon-size);
+    width: var(--mobile-social-icon-size);
+    border: 1px solid white;
+    border-radius: 50%;
+  }
 
-.fa {
-  text-decoration: none;
-  color: white;
+  & .fa {
+    text-decoration: none;
+    color: white;
+  }
 }
-
 .credits {
   font-size: var(--font-size-12);
   text-align: center;
