@@ -89,11 +89,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.landing__hero {
-  margin-bottom: var(--spacing-56);
-  max-width: var(--landing-hero-width);
+  & .landing__hero {
+    margin-bottom: var(--spacing-56);
+    max-width: var(--landing-hero-width);
+  }
 }
 
 .landing__card--text {
@@ -101,21 +100,20 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
+  & .landing__card--heading {
+    font-family: var(--poppins);
+    line-height: var(--line-height-125);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-24);
+  }
 
-.landing__card--heading {
-  font-family: var(--poppins);
-  line-height: var(--line-height-125);
-  font-size: var(--font-size-24);
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--spacing-24);
-}
-
-.landing__card--description {
-  font-family: var(--open-sans);
-  line-height: var(--line-height-150);
-  font-size: var(--font-size-16);
-  margin-bottom: var(--spacing-32);
+  & .landing__card--description {
+    font-family: var(--open-sans);
+    line-height: var(--line-height-150);
+    font-size: var(--font-size-16);
+    margin-bottom: var(--spacing-32);
+  }
 }
 
 .landing__card--register {
@@ -129,11 +127,11 @@ body {
   color: var(--purple-700);
   box-shadow: var(--register-button-shadow);
   font-weight: var(--font-weight-regular);
-}
 
-.landing__card--register:hover {
-  color: white;
-  background-color: var(--magenta-400);
+  &:hover {
+    color: white;
+    background-color: var(--magenta-400);
+  }
 }
 
 .landing__links {
@@ -183,10 +181,9 @@ body {
 
   .landing__card {
     margin-inline: var(--spacing-40);
-  }
-
-  .landing__hero {
-    max-width: clamp(38rem, 32.5rem + 12.222vw, 43.5rem);
+    & .landing__hero {
+      max-width: clamp(38rem, 32.5rem + 12.222vw, 43.5rem);
+    }
   }
 
   .landing__card--heading {
@@ -227,12 +224,11 @@ body {
   .landing__card {
     flex-direction: row;
     margin: auto;
-  }
-
-  .landing__card--text {
-    margin-left: var(--spacing-56);
-    align-items: flex-start;
-    text-align: left;
+    & .landing__card--text {
+      margin-left: var(--spacing-56);
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   .landing__links {
