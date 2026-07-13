@@ -23,7 +23,8 @@
   --font-size-18: 1.125rem;
   --font-size-16: 1rem;
   --font-size-12: 0.75rem;
-  --mobile-social-icon-size: 1.75rem;
+  --mobile-social-border-size: 1.75rem;
+  --mobile-social-icon-size: 0.8rem;
 }
 
 html {
@@ -117,28 +118,26 @@ body {
   display: flex;
   gap: 1rem;
 
-  & .border {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--mobile-social-icon-size);
-    width: var(--mobile-social-icon-size);
-    border: 1px solid white;
-    border-radius: 50%;
-  }
-
-  & .border:hover {
-    color: var(--pink-400);
-  }
-
   & .fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: white;
+    border: 1px solid white;
+    width: var(--mobile-social-border-size);
+    height: var(--mobile-social-border-size);
+    font-size: var(--mobile-social-icon-size);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
   }
   & .fa:hover {
     color: var(--pink-400);
+    border: 1px solid var(--pink-400);
   }
 }
+
 .credits {
   font-family: var(--open-sans);
   font-size: var(--font-size-12);
