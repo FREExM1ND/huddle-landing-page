@@ -1,5 +1,7 @@
 :root {
   --purple-700: hsl(257, 40%, 49%);
+  --pink-400: hsl(322, 100%, 66%);
+  --magenta-400: hsl(300, 68%, 71%);
   --poppins: "Poppins", Helvetica, sans-serif;
   --open-sans: "Open Sans", Arial, sans-serif;
   --spacing-8: 0.5rem;
@@ -60,11 +62,10 @@ body {
 .landing {
   margin-block: var(--spacing-40);
   margin-inline: var(--spacing-35-5);
-}
-
-.landing__logo {
-  margin-bottom: var(--spacing-64);
-  max-width: 7.5rem;
+  & .landing__logo {
+    margin-bottom: var(--spacing-64);
+    max-width: 7.5rem;
+  }
 }
 
 .landing__card {
@@ -72,28 +73,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  & .landing__hero {
+    margin-bottom: var(--spacing-56);
+    max-width: 19rem;
+  }
 
-.landing__hero {
-  margin-bottom: var(--spacing-56);
-  max-width: 19rem;
-}
+  & .landing__card--heading {
+    font-family: var(--poppins);
+    line-height: var(--line-height-125);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    margin-bottom: var(--spacing-24);
+  }
 
-.landing__card--heading {
-  font-family: var(--poppins);
-  line-height: var(--line-height-125);
-  font-size: var(--font-size-24);
-  font-weight: var(--font-weight-semibold);
-  text-align: center;
-  margin-bottom: var(--spacing-24);
-}
-
-.landing__card--text {
-  font-family: var(--open-sans);
-  line-height: var(--line-height-150);
-  font-size: var(--font-size-16);
-  text-align: center;
-  margin-bottom: var(--spacing-32);
+  & .landing__card--text {
+    font-family: var(--open-sans);
+    line-height: var(--line-height-150);
+    font-size: var(--font-size-16);
+    text-align: center;
+    margin-bottom: var(--spacing-32);
+  }
 }
 
 .landing__card--register {
@@ -106,6 +106,11 @@ body {
   margin-bottom: var(--spacing-62-35);
   color: var(--purple-700);
   font-weight: var(--font-weight-regular);
+}
+
+.landing__card--register:hover {
+  color: white;
+  background-color: var(--magenta-400);
 }
 
 .landing__links {
@@ -122,14 +127,30 @@ body {
     border-radius: 50%;
   }
 
+  & .border:hover {
+    color: var(--pink-400);
+  }
+
   & .fa {
     text-decoration: none;
     color: white;
   }
+  & .fa:hover {
+    color: var(--pink-400);
+  }
 }
 .credits {
+  font-family: var(--open-sans);
   font-size: var(--font-size-12);
   text-align: center;
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (width >= 45rem) {
