@@ -11,6 +11,7 @@
   --spacing-35-5: 2.21875rem;
   --spacing-36: 2.25rem;
   --spacing-40: 2.5rem;
+  --spacing-44: 2.75rem;
   --spacing-56: 3.5rem;
   --spacing-62-35: 3.896875rem;
   --spacing-64: 4rem;
@@ -65,7 +66,6 @@ li {
 }
 
 body {
-  align-items: center;
   height: 100vh;
   background-color: var(--purple-700);
   position: relative;
@@ -117,16 +117,21 @@ body {
 }
 
 .landing__card--register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: var(--register-button-width);
   height: var(--register-button-height);
   border-radius: var(--register-button-border-radius);
   border: 0 solid transparent;
-  font-family: var(--open-sans);
-  font-size: var(--font-size-12);
   margin-bottom: var(--spacing-62-35);
+  background-color: white;
   color: var(--purple-700);
   box-shadow: var(--register-button-shadow);
   font-weight: var(--font-weight-regular);
+  text-decoration: none;
+  font-family: var(--open-sans);
+  font-size: var(--font-size-12);
 
   &:hover {
     color: white;
@@ -150,12 +155,11 @@ body {
     height: var(--mobile-social-border-size);
     font-size: var(--mobile-social-icon-size);
     text-align: center;
-    text-decoration: none;
     border-radius: 50%;
-  }
-  & .fa:hover {
-    color: var(--pink-400);
-    border: 1px solid var(--pink-400);
+    &:hover {
+      color: var(--pink-400);
+      border: 1px solid var(--pink-400);
+    }
   }
 }
 
@@ -166,10 +170,9 @@ body {
   & a {
     text-decoration: none;
     color: white;
-  }
-
-  & a:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -180,24 +183,26 @@ body {
   }
 
   .landing__card {
-    margin-inline: var(--spacing-40);
     & .landing__hero {
       max-width: clamp(38rem, 32.5rem + 12.222vw, 43.5rem);
     }
   }
 
-  .landing__card--heading {
-    font-size: var(--font-size-40);
+  .landing__card--text {
+    margin-inline: var(--spacing-44);
+    .landing__card--heading {
+      font-size: var(--font-size-40);
+    }
+    .landing__card--description {
+      font-size: var(--font-size-18);
+    }
   }
 
-  .landing__card--description,
   .landing__card--register {
-    font-size: var(--font-size-18);
-  }
-
-  .landing__card--register {
+    margin-bottom: var(--spacing-40);
     height: var(--register-button-tab-desk-height);
     border-radius: var(--register-button-tab-desk-border-radius);
+    font-size: var(--font-size-18);
   }
 }
 
@@ -210,7 +215,6 @@ body {
     margin: auto;
     background-image: url("./images/bg-desktop.svg");
     background-size: cover;
-    overflow: hidden;
   }
 
   .landing {
