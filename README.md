@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-for-huddle-with-focus-states-lSwHBfZ1Qi)
 - [Live Site URL](https://freexm1nd.github.io/huddle-landing-page/)
 
 ## My process
