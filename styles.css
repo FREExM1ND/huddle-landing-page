@@ -184,7 +184,7 @@ body {
 
   .landing__card {
     & .landing__hero {
-      max-width: clamp(38rem, 32.5rem + 12.222vw, 43.5rem);
+      max-width: var(--landing-hero-tab-desk-width);
     }
   }
 
